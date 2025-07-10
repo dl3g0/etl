@@ -1,0 +1,531 @@
+{
+  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.63\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Página 3",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "24c20d7d1a65dd66ee85",
+      "ordinal": 3,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"061c0294d6c6370b7b74\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":464.6305418719212,\"z\":3000,\"width\":545.320197044335,\"height\":255.36945812807883,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"pieChart\",\"projections\":{\"Y\":[{\"queryRef\":\"citas_hechos.Citas Atendidas\"}],\"Category\":[{\"queryRef\":\"dim_especialidades.nombre_especialidad\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_especialidades\",\"Type\":0},{\"Name\":\"c\",\"Entity\":\"citas_hechos\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"nombre_especialidad\"},\"Name\":\"dim_especialidades.nombre_especialidad\",\"NativeReferenceName\":\"nombre_especialidad\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Atendidas\"},\"Name\":\"citas_hechos.Citas Atendidas\",\"NativeReferenceName\":\"Citas Atendidas\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Atendidas\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 255.37,
+          "width": 545.32,
+          "x": 0.00,
+          "y": 464.63,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"1a37960c12c9bb43008e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":29.261083743842367,\"z\":0,\"width\":193.30049261083744,\"height\":139.21182266009853,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"citas_hechos.Citas Atendidas\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"citas_hechos\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Atendidas\"},\"Name\":\"citas_hechos.Citas Atendidas\",\"NativeReferenceName\":\"Citas Atendidas\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Atendidas\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 139.21,
+          "width": 193.30,
+          "x": 0.00,
+          "y": 29.26,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"46a85e8616d5bd12410d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":548.8669950738916,\"y\":189.7536945812808,\"z\":2000,\"width\":454.8768472906404,\"height\":274.8768472906404,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Y\":[{\"queryRef\":\"citas_hechos.Citas Atendidas\"}],\"Category\":[{\"queryRef\":\"dim_pacientes.genero\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_pacientes\",\"Type\":0},{\"Name\":\"c\",\"Entity\":\"citas_hechos\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"genero\"},\"Name\":\"dim_pacientes.genero\",\"NativeReferenceName\":\"genero\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Atendidas\"},\"Name\":\"citas_hechos.Citas Atendidas\",\"NativeReferenceName\":\"Citas Atendidas\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Atendidas\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 274.88,
+          "width": 454.88,
+          "x": 548.87,
+          "y": 189.75,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"6cac1b9426444292067c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":189.7536945812808,\"z\":1000,\"width\":545.320197044335,\"height\":258.0295566502463,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Y\":[{\"queryRef\":\"citas_hechos.Citas Atendidas\"},{\"queryRef\":\"citas_hechos.Total de citas\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"citas_hechos\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Atendidas\"},\"Name\":\"citas_hechos.Citas Atendidas\",\"NativeReferenceName\":\"Citas Atendidas\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Total de citas\"},\"Name\":\"citas_hechos.Total de citas\",\"NativeReferenceName\":\"Total de citas\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Atendidas\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 258.03,
+          "width": 545.32,
+          "x": 0.00,
+          "y": 189.75,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"76810b40dc5b27c93ee3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":545.320197044335,\"y\":464.6305418719212,\"z\":4000,\"width\":458.42364532019707,\"height\":255.36945812807883,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"pieChart\",\"projections\":{\"Y\":[{\"queryRef\":\"citas_hechos.Citas Atendidas\"}],\"Category\":[{\"queryRef\":\"citas_hechos.motivo_cita\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"citas_hechos\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"motivo_cita\"},\"Name\":\"citas_hechos.motivo_cita\",\"NativeReferenceName\":\"motivo_cita\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Atendidas\"},\"Name\":\"citas_hechos.Citas Atendidas\",\"NativeReferenceName\":\"Citas Atendidas\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Atendidas\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 255.37,
+          "width": 458.42,
+          "x": 545.32,
+          "y": 464.63,
+          "z": 4000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Página 2",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "2a3688521d5a020102d3",
+      "ordinal": 4,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"1b12a3251034ec70b578\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":464.6305418719212,\"z\":3000,\"width\":545.320197044335,\"height\":255.36945812807883,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"pieChart\",\"projections\":{\"Y\":[{\"queryRef\":\"citas_hechos.Citas Canceladas\"}],\"Category\":[{\"queryRef\":\"dim_especialidades.nombre_especialidad\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"citas_hechos\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"dim_especialidades\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Canceladas\"},\"Name\":\"citas_hechos.Citas Canceladas\",\"NativeReferenceName\":\"Citas Canceladas\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"nombre_especialidad\"},\"Name\":\"dim_especialidades.nombre_especialidad\",\"NativeReferenceName\":\"nombre_especialidad\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Canceladas\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 255.37,
+          "width": 545.32,
+          "x": 0.00,
+          "y": 464.63,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"9bdbe9e00441a1608415\",\"layouts\":[{\"id\":0,\"position\":{\"x\":548.8669950738916,\"y\":189.7536945812808,\"z\":2000,\"width\":454.8768472906404,\"height\":274.8768472906404,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Y\":[{\"queryRef\":\"citas_hechos.Citas Canceladas\"}],\"Category\":[{\"queryRef\":\"dim_pacientes.genero\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"citas_hechos\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"dim_pacientes\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Canceladas\"},\"Name\":\"citas_hechos.Citas Canceladas\",\"NativeReferenceName\":\"Citas Canceladas\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"genero\"},\"Name\":\"dim_pacientes.genero\",\"NativeReferenceName\":\"genero\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Canceladas\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 274.88,
+          "width": 454.88,
+          "x": 548.87,
+          "y": 189.75,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"a1ad16e4e0957b2dcc89\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":209.26108374384236,\"height\":133.89162561576356,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"citas_hechos.Citas Canceladas\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"citas_hechos\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Canceladas\"},\"Name\":\"citas_hechos.Citas Canceladas\",\"NativeReferenceName\":\"Citas Canceladas\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Canceladas\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 133.89,
+          "width": 209.26,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"c6b35ad60301b524dccd\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":189.7536945812808,\"z\":1000,\"width\":545.320197044335,\"height\":258.0295566502463,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Y\":[{\"queryRef\":\"citas_hechos.Citas Canceladas\"},{\"queryRef\":\"citas_hechos.Total de citas\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"citas_hechos\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Canceladas\"},\"Name\":\"citas_hechos.Citas Canceladas\",\"NativeReferenceName\":\"Citas Canceladas\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Total de citas\"},\"Name\":\"citas_hechos.Total de citas\",\"NativeReferenceName\":\"Total de citas\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Canceladas\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 258.03,
+          "width": 545.32,
+          "x": 0.00,
+          "y": 189.75,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"f6e32b1c577ac5572dd8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":545.320197044335,\"y\":464.6305418719212,\"z\":4000,\"width\":458.42364532019707,\"height\":255.36945812807883,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"pieChart\",\"projections\":{\"Y\":[{\"queryRef\":\"citas_hechos.Citas Canceladas\"}],\"Category\":[{\"queryRef\":\"citas_hechos.motivo_cita\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"citas_hechos\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Canceladas\"},\"Name\":\"citas_hechos.Citas Canceladas\",\"NativeReferenceName\":\"Citas Canceladas\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"motivo_cita\"},\"Name\":\"citas_hechos.motivo_cita\",\"NativeReferenceName\":\"motivo_cita\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Canceladas\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 255.37,
+          "width": 458.42,
+          "x": 545.32,
+          "y": 464.63,
+          "z": 4000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Página 4",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "2f063efbbc15c040034b",
+      "ordinal": 5,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"180579f2a0063e20cceb\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":464.6305418719212,\"z\":3000,\"width\":545.320197044335,\"height\":255.36945812807883,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"pieChart\",\"projections\":{\"Y\":[{\"queryRef\":\"citas_hechos.Citas programadas\"}],\"Category\":[{\"queryRef\":\"dim_especialidades.nombre_especialidad\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_especialidades\",\"Type\":0},{\"Name\":\"c\",\"Entity\":\"citas_hechos\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"nombre_especialidad\"},\"Name\":\"dim_especialidades.nombre_especialidad\",\"NativeReferenceName\":\"nombre_especialidad\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas programadas\"},\"Name\":\"citas_hechos.Citas programadas\",\"NativeReferenceName\":\"Citas programadas\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas programadas\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 255.37,
+          "width": 545.32,
+          "x": 0.00,
+          "y": 464.63,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"7bc3475d50c1207ceb84\",\"layouts\":[{\"id\":0,\"position\":{\"x\":545.320197044335,\"y\":464.6305418719212,\"z\":4000,\"width\":458.42364532019707,\"height\":255.36945812807883,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"pieChart\",\"projections\":{\"Y\":[{\"queryRef\":\"citas_hechos.Citas programadas\"}],\"Category\":[{\"queryRef\":\"citas_hechos.motivo_cita\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"citas_hechos\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"motivo_cita\"},\"Name\":\"citas_hechos.motivo_cita\",\"NativeReferenceName\":\"motivo_cita\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas programadas\"},\"Name\":\"citas_hechos.Citas programadas\",\"NativeReferenceName\":\"Citas programadas\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas programadas\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 255.37,
+          "width": 458.42,
+          "x": 545.32,
+          "y": 464.63,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"95924170a00270b036e7\",\"layouts\":[{\"id\":0,\"position\":{\"x\":548.8669950738916,\"y\":189.7536945812808,\"z\":2000,\"width\":454.8768472906404,\"height\":274.8768472906404,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Y\":[{\"queryRef\":\"citas_hechos.Citas programadas\"}],\"Category\":[{\"queryRef\":\"dim_pacientes.genero\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_pacientes\",\"Type\":0},{\"Name\":\"c\",\"Entity\":\"citas_hechos\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"genero\"},\"Name\":\"dim_pacientes.genero\",\"NativeReferenceName\":\"genero\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas programadas\"},\"Name\":\"citas_hechos.Citas programadas\",\"NativeReferenceName\":\"Citas programadas\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas programadas\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 274.88,
+          "width": 454.88,
+          "x": 548.87,
+          "y": 189.75,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"a5c0582c7415163762e8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":29.261083743842367,\"z\":0,\"width\":193.30049261083744,\"height\":139.21182266009853,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"citas_hechos.Citas programadas\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"citas_hechos\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas programadas\"},\"Name\":\"citas_hechos.Citas programadas\",\"NativeReferenceName\":\"Citas programadas\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas programadas\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 139.21,
+          "width": 193.30,
+          "x": 0.00,
+          "y": 29.26,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"fc84021f94aabe0c9098\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":189.7536945812808,\"z\":1000,\"width\":545.320197044335,\"height\":258.0295566502463,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Y\":[{\"queryRef\":\"citas_hechos.Citas programadas\"},{\"queryRef\":\"citas_hechos.Total de citas\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"citas_hechos\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas programadas\"},\"Name\":\"citas_hechos.Citas programadas\",\"NativeReferenceName\":\"Citas programadas\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Total de citas\"},\"Name\":\"citas_hechos.Total de citas\",\"NativeReferenceName\":\"Total de citas\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas programadas\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 258.03,
+          "width": 545.32,
+          "x": 0.00,
+          "y": 189.75,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Página 8",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "5ea777988c1a55098960",
+      "ordinal": 7,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"00b75ed2d3608cced0a0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":290.6772908366534,\"y\":0,\"z\":1000,\"width\":279.45816733067727,\"height\":280.47808764940237,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"citas_hechos.Citas Promedio por Médico\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"citas_hechos\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Promedio por Médico\"},\"Name\":\"citas_hechos.Citas Promedio por Médico\",\"NativeReferenceName\":\"Citas Promedio por Médico\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Promedio por Médico\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 280.48,
+          "width": 279.46,
+          "x": 290.68,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"36b459316a28d0de0802\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10.199203187250996,\"y\":289.6573705179283,\"z\":2000,\"width\":681.3067729083665,\"height\":280.47808764940237,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Y\":[{\"queryRef\":\"citas_hechos.Total de citas\"}],\"Category\":[{\"queryRef\":\"dim_pacientes.Edad\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"citas_hechos\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"dim_pacientes\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Total de citas\"},\"Name\":\"citas_hechos.Total de citas\",\"NativeReferenceName\":\"Total de citas\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Edad\"},\"Name\":\"dim_pacientes.Edad\",\"NativeReferenceName\":\"Edad\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Total de citas\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 280.48,
+          "width": 681.31,
+          "x": 10.20,
+          "y": 289.66,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"428f6d9f0e4822394c21\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10,\"y\":0,\"width\":280,\"height\":280,\"z\":0,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"citas_hechos.Citas Promedio por Paciente\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"citas_hechos\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Promedio por Paciente\"},\"Name\":\"citas_hechos.Citas Promedio por Paciente\",\"NativeReferenceName\":\"Citas Promedio por Paciente\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Promedio por Paciente\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 280.00,
+          "width": 280.00,
+          "x": 10.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"bfb5c2a9541aab4e2185\",\"layouts\":[{\"id\":0,\"position\":{\"x\":570.1477832512315,\"y\":0,\"z\":3000,\"width\":266.8965517241379,\"height\":280.1970443349754,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"citas_hechos.Citas Atendidas en Horas Pico\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"citas_hechos\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Atendidas en Horas Pico\"},\"Name\":\"citas_hechos.Citas Atendidas en Horas Pico\",\"NativeReferenceName\":\"Citas Atendidas en Horas Pico\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Atendidas en Horas Pico\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 280.20,
+          "width": 266.90,
+          "x": 570.15,
+          "y": 0.00,
+          "z": 3000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Página 6",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "65d4d340d82070b6d674",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"21d705e9679028157e04\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10,\"y\":352,\"width\":354,\"height\":342,\"z\":1000,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Y\":[{\"queryRef\":\"citas_hechos.Tasa de programacion\"}],\"Category\":[{\"queryRef\":\"dim_especialidades.nombre_especialidad\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"citas_hechos\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"dim_especialidades\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Tasa de programacion\"},\"Name\":\"citas_hechos.Tasa de programacion\",\"NativeReferenceName\":\"Tasa de programacion\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"nombre_especialidad\"},\"Name\":\"dim_especialidades.nombre_especialidad\",\"NativeReferenceName\":\"nombre_especialidad\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Tasa de programacion\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 342.00,
+          "width": 354.00,
+          "x": 10.00,
+          "y": 352.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"35619aed9615dd302be3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":476.1576354679803,\"y\":0,\"z\":0,\"width\":353.7931034482759,\"height\":342.26600985221677,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Y\":[{\"queryRef\":\"citas_hechos.Tasa de cancelacion\"}],\"Category\":[{\"queryRef\":\"dim_especialidades.nombre_especialidad\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"citas_hechos\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"dim_especialidades\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Tasa de cancelacion\"},\"Name\":\"citas_hechos.Tasa de cancelacion\",\"NativeReferenceName\":\"Tasa de cancelacion\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"nombre_especialidad\"},\"Name\":\"dim_especialidades.nombre_especialidad\",\"NativeReferenceName\":\"nombre_especialidad\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Tasa de cancelacion\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 342.27,
+          "width": 353.79,
+          "x": 476.16,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"635f42bb18846292e068\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":3000,\"width\":426.5024630541872,\"height\":316.55172413793105,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Category\":[{\"queryRef\":\"dim_especialidades.nombre_especialidad\",\"active\":true}],\"Y\":[{\"queryRef\":\"citas_hechos.Tasa de Atención\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_especialidades\",\"Type\":0},{\"Name\":\"c\",\"Entity\":\"citas_hechos\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"nombre_especialidad\"},\"Name\":\"dim_especialidades.nombre_especialidad\",\"NativeReferenceName\":\"nombre_especialidad\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Tasa de Atención\"},\"Name\":\"citas_hechos.Tasa de Atención\",\"NativeReferenceName\":\"Tasa de Atención\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Tasa de Atención\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 316.55,
+          "width": 426.50,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"d53aba277a12d9a03444\",\"layouts\":[{\"id\":0,\"position\":{\"x\":462.85714285714283,\"y\":360,\"z\":2000,\"width\":353.7931034482759,\"height\":342.26600985221677,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Y\":[{\"queryRef\":\"citas_hechos.Tasa de reprogramacion\"}],\"Category\":[{\"queryRef\":\"dim_especialidades.nombre_especialidad\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"citas_hechos\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"dim_especialidades\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Tasa de reprogramacion\"},\"Name\":\"citas_hechos.Tasa de reprogramacion\",\"NativeReferenceName\":\"Tasa de reprogramacion\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"nombre_especialidad\"},\"Name\":\"dim_especialidades.nombre_especialidad\",\"NativeReferenceName\":\"nombre_especialidad\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Tasa de reprogramacion\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 342.27,
+          "width": 353.79,
+          "x": 462.86,
+          "y": 360.00,
+          "z": 2000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Página 5",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "6eb1d7d7a65008002407",
+      "ordinal": 6,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"6dd23faf60502a438326\",\"layouts\":[{\"id\":0,\"position\":{\"x\":545.320197044335,\"y\":144.5320197044335,\"z\":2000,\"width\":454.8768472906404,\"height\":274.8768472906404,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Y\":[{\"queryRef\":\"citas_hechos.Citas Reprogramadas\"}],\"Category\":[{\"queryRef\":\"dim_pacientes.genero\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_pacientes\",\"Type\":0},{\"Name\":\"c\",\"Entity\":\"citas_hechos\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"genero\"},\"Name\":\"dim_pacientes.genero\",\"NativeReferenceName\":\"genero\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Reprogramadas\"},\"Name\":\"citas_hechos.Citas Reprogramadas\",\"NativeReferenceName\":\"Citas Reprogramadas\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Reprogramadas\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 274.88,
+          "width": 454.88,
+          "x": 545.32,
+          "y": 144.53,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"703c462877443eb51ab0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":144.5320197044335,\"z\":1000,\"width\":545.320197044335,\"height\":258.0295566502463,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Y\":[{\"queryRef\":\"citas_hechos.Citas Reprogramadas\"},{\"queryRef\":\"citas_hechos.Total de citas\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"citas_hechos\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Reprogramadas\"},\"Name\":\"citas_hechos.Citas Reprogramadas\",\"NativeReferenceName\":\"Citas Reprogramadas\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Total de citas\"},\"Name\":\"citas_hechos.Total de citas\",\"NativeReferenceName\":\"Total de citas\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Reprogramadas\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 258.03,
+          "width": 545.32,
+          "x": 0.00,
+          "y": 144.53,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"7c597c99a2422957751e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":545.320197044335,\"y\":464.6305418719212,\"z\":4000,\"width\":458.42364532019707,\"height\":255.36945812807883,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"pieChart\",\"projections\":{\"Y\":[{\"queryRef\":\"citas_hechos.Citas Reprogramadas\"}],\"Category\":[{\"queryRef\":\"citas_hechos.motivo_cita\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"citas_hechos\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"motivo_cita\"},\"Name\":\"citas_hechos.motivo_cita\",\"NativeReferenceName\":\"motivo_cita\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Reprogramadas\"},\"Name\":\"citas_hechos.Citas Reprogramadas\",\"NativeReferenceName\":\"Citas Reprogramadas\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Reprogramadas\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 255.37,
+          "width": 458.42,
+          "x": 545.32,
+          "y": 464.63,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"a6b279afec0321466d76\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":221.67487684729065,\"height\":132.11822660098522,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"citas_hechos.Citas Reprogramadas\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"citas_hechos\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Reprogramadas\"},\"Name\":\"citas_hechos.Citas Reprogramadas\",\"NativeReferenceName\":\"Citas Reprogramadas\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Reprogramadas\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 132.12,
+          "width": 221.67,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"ae90df9dbe35909be35e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":464.6305418719212,\"z\":3000,\"width\":545.320197044335,\"height\":255.36945812807883,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"pieChart\",\"projections\":{\"Y\":[{\"queryRef\":\"citas_hechos.Citas Reprogramadas\"}],\"Category\":[{\"queryRef\":\"dim_especialidades.nombre_especialidad\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_especialidades\",\"Type\":0},{\"Name\":\"c\",\"Entity\":\"citas_hechos\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"nombre_especialidad\"},\"Name\":\"dim_especialidades.nombre_especialidad\",\"NativeReferenceName\":\"nombre_especialidad\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Reprogramadas\"},\"Name\":\"citas_hechos.Citas Reprogramadas\",\"NativeReferenceName\":\"Citas Reprogramadas\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Reprogramadas\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 255.37,
+          "width": 545.32,
+          "x": 0.00,
+          "y": 464.63,
+          "z": 3000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Página 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "badcb83be30da8d46e2a",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"04ee8d2e304cd3d28d74\",\"layouts\":[{\"id\":0,\"position\":{\"x\":475.16873889875666,\"y\":160.2841918294849,\"z\":6000,\"width\":426.28774422735347,\"height\":261.45648312611013,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Y\":[{\"queryRef\":\"citas_hechos.Citas Atendidas\"},{\"queryRef\":\"citas_hechos.Citas Canceladas\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"citas_hechos\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Atendidas\"},\"Name\":\"citas_hechos.Citas Atendidas\",\"NativeReferenceName\":\"Citas Atendidas\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Canceladas\"},\"Name\":\"citas_hechos.Citas Canceladas\",\"NativeReferenceName\":\"Citas Canceladas\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Atendidas\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 261.46,
+          "width": 426.29,
+          "x": 475.17,
+          "y": 160.28,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"0d74e7b28c3b2d752500\",\"layouts\":[{\"id\":0,\"position\":{\"x\":17.05150976909414,\"y\":160.2841918294849,\"z\":5000,\"width\":426.28774422735347,\"height\":261.45648312611013,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"pieChart\",\"projections\":{\"Y\":[{\"queryRef\":\"citas_hechos.Total de citas\"}],\"Category\":[{\"queryRef\":\"citas_hechos.estado_cita\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"citas_hechos\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Total de citas\"},\"Name\":\"citas_hechos.Total de citas\",\"NativeReferenceName\":\"Total de citas\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"estado_cita\"},\"Name\":\"citas_hechos.estado_cita\",\"NativeReferenceName\":\"estado_cita\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Total de citas\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 261.46,
+          "width": 426.29,
+          "x": 17.05,
+          "y": 160.28,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"12025fbd17c74057890c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":291.6972111553785,\"y\":0,\"z\":0,\"width\":152.98804780876495,\"height\":121.37051792828686,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"almacen_citas_v2 citas_hechos.Total de citas\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"citas_hechos\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Total de citas\"},\"Name\":\"almacen_citas_v2 citas_hechos.Total de citas\",\"NativeReferenceName\":\"Total de citas\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Total de citas\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 121.37,
+          "width": 152.99,
+          "x": 291.70,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"145ae92f0715ab67981e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":135.64940239043824,\"y\":0,\"z\":11000,\"width\":156.04780876494024,\"height\":121.37051792828686,\"tabOrder\":11000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"citas_hechos.Medicos unicos\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"citas_hechos\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Medicos unicos\"},\"Name\":\"citas_hechos.Medicos unicos\",\"NativeReferenceName\":\"Medicos unicos\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Medicos unicos\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 121.37,
+          "width": 156.05,
+          "x": 135.65,
+          "y": 0.00,
+          "z": 11000.00
+        },
+        {
+          "config": "{\"name\":\"1780c01d39d2b2169dc3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1135.1713147410358,\"y\":0,\"z\":4000,\"width\":144.82868525896416,\"height\":121.37051792828686,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"citas_hechos.Citas Atendidas\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"citas_hechos\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Atendidas\"},\"Name\":\"citas_hechos.Citas Atendidas\",\"NativeReferenceName\":\"Citas Atendidas\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Atendidas\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 121.37,
+          "width": 144.83,
+          "x": 1135.17,
+          "y": 0.00,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"1d37b99f10c830240248\",\"layouts\":[{\"id\":0,\"position\":{\"x\":986.2629482071713,\"y\":0,\"z\":3000,\"width\":148.90836653386455,\"height\":121.37051792828686,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"citas_hechos.Citas programadas\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"citas_hechos\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas programadas\"},\"Name\":\"citas_hechos.Citas programadas\",\"NativeReferenceName\":\"Citas programadas\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas programadas\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 121.37,
+          "width": 148.91,
+          "x": 986.26,
+          "y": 0.00,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"1ef46c9846b7ae8c62c7\",\"layouts\":[{\"id\":0,\"position\":{\"x\":643.5697211155378,\"y\":0,\"z\":1000,\"width\":171.34661354581672,\"height\":121.37051792828686,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"citas_hechos.Citas Canceladas\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"citas_hechos\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Canceladas\"},\"Name\":\"citas_hechos.Citas Canceladas\",\"NativeReferenceName\":\"Citas Canceladas\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Canceladas\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 121.37,
+          "width": 171.35,
+          "x": 643.57,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"2afebd100a891464184d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":814.9163346613545,\"y\":0,\"z\":2000,\"width\":171.34661354581672,\"height\":121.37051792828686,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"citas_hechos.Citas Reprogramadas\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"citas_hechos\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Reprogramadas\"},\"Name\":\"citas_hechos.Citas Reprogramadas\",\"NativeReferenceName\":\"Citas Reprogramadas\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Reprogramadas\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 121.37,
+          "width": 171.35,
+          "x": 814.92,
+          "y": 0.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"48ba7b0deab8009dd0a7\",\"layouts\":[{\"id\":0,\"position\":{\"x\":909.7689243027888,\"y\":422.24701195219126,\"z\":12000,\"width\":347.79282868525894,\"height\":260.0796812749004,\"tabOrder\":12000}}],\"singleVisual\":{\"visualType\":\"pieChart\",\"projections\":{\"Y\":[{\"queryRef\":\"citas_hechos.Total de citas\"}],\"Category\":[{\"queryRef\":\"dim_medicos.genero\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"citas_hechos\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"dim_medicos\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Total de citas\"},\"Name\":\"citas_hechos.Total de citas\",\"NativeReferenceName\":\"Total de citas\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"genero\"},\"Name\":\"dim_medicos.genero\",\"NativeReferenceName\":\"genero\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Total de citas\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 260.08,
+          "width": 347.79,
+          "x": 909.77,
+          "y": 422.25,
+          "z": 12000.00
+        },
+        {
+          "config": "{\"name\":\"58e14c1b830c0c003acc\",\"layouts\":[{\"id\":0,\"position\":{\"x\":901.4564831261101,\"y\":160.2841918294849,\"z\":9000,\"width\":347.85079928952047,\"height\":260.31971580817054,\"tabOrder\":9000}}],\"singleVisual\":{\"visualType\":\"pieChart\",\"projections\":{\"Y\":[{\"queryRef\":\"citas_hechos.Total de citas\"}],\"Category\":[{\"queryRef\":\"dim_pacientes.genero\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"citas_hechos\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"dim_pacientes\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Total de citas\"},\"Name\":\"citas_hechos.Total de citas\",\"NativeReferenceName\":\"Total de citas\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"genero\"},\"Name\":\"dim_pacientes.genero\",\"NativeReferenceName\":\"genero\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Total de citas\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 260.32,
+          "width": 347.85,
+          "x": 901.46,
+          "y": 160.28,
+          "z": 9000.00
+        },
+        {
+          "config": "{\"name\":\"98e861a81deb7309aa61\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":10000,\"width\":135.64940239043824,\"height\":121.37051792828686,\"tabOrder\":10000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"citas_hechos.Pacientes unicos\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"citas_hechos\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Pacientes unicos\"},\"Name\":\"citas_hechos.Pacientes unicos\",\"NativeReferenceName\":\"Pacientes unicos\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Pacientes unicos\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 121.37,
+          "width": 135.65,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 10000.00
+        },
+        {
+          "config": "{\"name\":\"c70395a607eb35ea9920\",\"layouts\":[{\"id\":0,\"position\":{\"x\":444.68525896414343,\"y\":0,\"z\":13000,\"width\":198.88446215139442,\"height\":121.37051792828686,\"tabOrder\":13000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"citas_hechos.Citas Atendidas en Horas Pico\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"citas_hechos\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Atendidas en Horas Pico\"},\"Name\":\"citas_hechos.Citas Atendidas en Horas Pico\",\"NativeReferenceName\":\"Citas Atendidas en Horas Pico\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Citas Atendidas en Horas Pico\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 121.37,
+          "width": 198.88,
+          "x": 444.69,
+          "y": 0.00,
+          "z": 13000.00
+        },
+        {
+          "config": "{\"name\":\"cbfbb8e01e15736656c0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":450.4433497536946,\"z\":7000,\"width\":426.5024630541872,\"height\":261.57635467980293,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"pieChart\",\"projections\":{\"Category\":[{\"queryRef\":\"citas_hechos.motivo_cita\",\"active\":true}],\"Y\":[{\"queryRef\":\"citas_hechos.Total de citas\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"citas_hechos\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"motivo_cita\"},\"Name\":\"citas_hechos.motivo_cita\",\"NativeReferenceName\":\"motivo_cita\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Total de citas\"},\"Name\":\"citas_hechos.Total de citas\",\"NativeReferenceName\":\"Total de citas\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Total de citas\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 261.58,
+          "width": 426.50,
+          "x": 0.00,
+          "y": 450.44,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"f8a727dc5304a23c9804\",\"layouts\":[{\"id\":0,\"position\":{\"x\":457.53694581280786,\"y\":422.0689655172414,\"z\":8000,\"width\":406.9950738916256,\"height\":297.9310344827586,\"tabOrder\":8000}}],\"singleVisual\":{\"visualType\":\"pieChart\",\"projections\":{\"Y\":[{\"queryRef\":\"citas_hechos.Total de citas\"}],\"Category\":[{\"queryRef\":\"dim_especialidades.nombre_especialidad\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"citas_hechos\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"dim_especialidades\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Total de citas\"},\"Name\":\"citas_hechos.Total de citas\",\"NativeReferenceName\":\"Total de citas\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"nombre_especialidad\"},\"Name\":\"dim_especialidades.nombre_especialidad\",\"NativeReferenceName\":\"nombre_especialidad\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Total de citas\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 297.93,
+          "width": 407.00,
+          "x": 457.54,
+          "y": 422.07,
+          "z": 8000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Página 7",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "cfc307f0409ce5c00b90",
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"149c036065d43b6071c0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10,\"y\":387,\"width\":535,\"height\":280,\"z\":2000,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Y\":[{\"queryRef\":\"citas_hechos.Total de citas\"}],\"Category\":[{\"queryRef\":\"dim_tiempo.anio\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"citas_hechos\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"dim_tiempo\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Total de citas\"},\"Name\":\"citas_hechos.Total de citas\",\"NativeReferenceName\":\"Total de citas\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"anio\"},\"Name\":\"dim_tiempo.anio\",\"NativeReferenceName\":\"anio\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Total de citas\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 280.00,
+          "width": 535.00,
+          "x": 10.00,
+          "y": 387.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"b4cf7403d211850b1841\",\"layouts\":[{\"id\":0,\"position\":{\"x\":567.0756972111553,\"y\":0,\"z\":1000,\"width\":602.7729083665339,\"height\":386.54980079681275,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"dim_tiempo.dia\",\"active\":true}],\"Y\":[{\"queryRef\":\"citas_hechos.Total de citas\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"citas_hechos\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"dim_tiempo\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"dia\"},\"Name\":\"dim_tiempo.dia\",\"NativeReferenceName\":\"dia\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Total de citas\"},\"Name\":\"citas_hechos.Total de citas\",\"NativeReferenceName\":\"Total de citas\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Total de citas\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 386.55,
+          "width": 602.77,
+          "x": 567.08,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"bbe2aaf453970d1ae995\",\"layouts\":[{\"id\":0,\"position\":{\"x\":598.6932270916335,\"y\":410.00796812749,\"z\":3000,\"width\":681.3067729083665,\"height\":280.47808764940237,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Y\":[{\"queryRef\":\"citas_hechos.Total de citas\"}],\"Category\":[{\"queryRef\":\"dim_pacientes.Edad\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"citas_hechos\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"dim_pacientes\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Total de citas\"},\"Name\":\"citas_hechos.Total de citas\",\"NativeReferenceName\":\"Total de citas\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Edad\"},\"Name\":\"dim_pacientes.Edad\",\"NativeReferenceName\":\"Edad\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Total de citas\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 280.48,
+          "width": 681.31,
+          "x": 598.69,
+          "y": 410.01,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"ccffaa8595e859307e48\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10.199203187250996,\"y\":0,\"z\":0,\"width\":535.4581673306773,\"height\":360.0318725099602,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"dim_tiempo.hora\",\"active\":true}],\"Y\":[{\"queryRef\":\"citas_hechos.Total de citas\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_tiempo\",\"Type\":0},{\"Name\":\"c\",\"Entity\":\"citas_hechos\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"hora\"},\"Name\":\"dim_tiempo.hora\",\"NativeReferenceName\":\"hora\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Total de citas\"},\"Name\":\"citas_hechos.Total de citas\",\"NativeReferenceName\":\"Total de citas\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Total de citas\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 360.03,
+          "width": 535.46,
+          "x": 10.20,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

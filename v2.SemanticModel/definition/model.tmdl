@@ -1,0 +1,33 @@
+model Model
+	culture: es-ES
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-PE
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["citas_hechos","dim_medicos","dim_especialidades","dim_tiempo","dim_pacientes"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.142.1277.0 (25.04)+014fde450f93691fc9537f0758d73d1c5df153ef
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table citas_hechos
+ref table DateTableTemplate_9e04f569-b7b5-4017-9312-11cf5e686d00
+ref table LocalDateTable_907847ac-413a-42ab-bd60-217ffbded659
+ref table LocalDateTable_5f81e7e9-9364-43bb-81bf-722c2ae40d69
+ref table dim_medicos
+ref table LocalDateTable_46b5900e-2153-4718-a4cf-1e7694bf01fd
+ref table dim_especialidades
+ref table LocalDateTable_7d194d34-ee46-4da9-9e95-a70b5fc672de
+ref table dim_tiempo
+ref table LocalDateTable_638456c6-8a69-4f99-9951-750a01df2599
+ref table LocalDateTable_d8708653-abdc-4ecb-bac7-8c0c0dc52960
+ref table dim_pacientes
+ref table LocalDateTable_ac47db3d-64bb-4523-ac85-e12333ea468d
+ref table LocalDateTable_b94035ee-f9f9-46e5-9693-29cfe82160c6
+
+ref cultureInfo es-ES
+

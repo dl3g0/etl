@@ -1,0 +1,54 @@
+table dim_especialidades
+	lineageTag: ee7ecaae-398b-473e-8207-007163ee2e37
+
+	column id_especialidad_sk
+		dataType: string
+		lineageTag: 6d4cd506-eef6-4e54-a69a-792eacfaed6d
+		summarizeBy: none
+		sourceColumn: id_especialidad_sk
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_especialidad
+		dataType: string
+		lineageTag: ae7653a5-6455-431f-8838-081c3fdc903f
+		summarizeBy: none
+		sourceColumn: id_especialidad
+
+		annotation SummarizationSetBy = Automatic
+
+	column nombre_especialidad
+		dataType: string
+		lineageTag: a0cdad68-055f-469a-94c7-37afe22b0fde
+		summarizeBy: none
+		sourceColumn: nombre_especialidad
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha_carga
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: ee215517-602d-45f3-a6e0-ad9d1012b176
+		summarizeBy: none
+		sourceColumn: fecha_carga
+
+		variation Variación
+			isDefault
+			relationship: 3c2e8797-42c4-4212-800f-1431c4a3b3ff
+			defaultHierarchy: LocalDateTable_7d194d34-ee46-4da9-9e95-a70b5fc672de.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_especialidades = m
+		mode: import
+		source =
+				let
+				    Origen = MySQL.Database("brighhvxoryhwrvn5zun-mysql.services.clever-cloud.com", "brighhvxoryhwrvn5zun", [ReturnSingleDatabase=true]),
+				    almacen_citas_v2_dim_especialidades = Origen{[Schema="brighhvxoryhwrvn5zun",Item="dim_especialidades"]}[Data]
+				in
+				    almacen_citas_v2_dim_especialidades
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
+

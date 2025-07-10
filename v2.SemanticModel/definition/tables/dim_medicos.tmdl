@@ -1,0 +1,86 @@
+table dim_medicos
+	lineageTag: 8054307f-be92-48dd-a436-1adbfcadc7a9
+
+	column id_medico_sk
+		dataType: string
+		lineageTag: 7a0a107e-f7ba-4640-b38f-e5c76f12062d
+		summarizeBy: none
+		sourceColumn: id_medico_sk
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_medico
+		dataType: string
+		lineageTag: a8bdf5f4-5b73-432d-a836-a6a38448d19c
+		summarizeBy: none
+		sourceColumn: id_medico
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_especialidad
+		dataType: string
+		lineageTag: a68cc474-905a-4dfd-b4e8-dad96c6a8f3a
+		summarizeBy: none
+		sourceColumn: id_especialidad
+
+		annotation SummarizationSetBy = Automatic
+
+	column codigo_empleado
+		dataType: string
+		lineageTag: e8c563ab-6b94-41d2-854d-b715c5ce50f9
+		summarizeBy: none
+		sourceColumn: codigo_empleado
+
+		annotation SummarizationSetBy = Automatic
+
+	column nombre
+		dataType: string
+		lineageTag: 02b209a7-dd01-4737-9a43-5cb822cb785c
+		summarizeBy: none
+		sourceColumn: nombre
+
+		annotation SummarizationSetBy = Automatic
+
+	column apellido
+		dataType: string
+		lineageTag: e1f51459-efb7-42cc-9033-6c3cdcd51345
+		summarizeBy: none
+		sourceColumn: apellido
+
+		annotation SummarizationSetBy = Automatic
+
+	column genero
+		dataType: string
+		lineageTag: f2359acf-3bf7-4db9-a97c-f0dd7055d288
+		summarizeBy: none
+		sourceColumn: genero
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha_carga
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 88e5754a-8523-4f3a-9695-79b2442d77b3
+		summarizeBy: none
+		sourceColumn: fecha_carga
+
+		variation Variación
+			isDefault
+			relationship: 54f9ab68-5a24-4eca-b018-aad1c7f88461
+			defaultHierarchy: LocalDateTable_46b5900e-2153-4718-a4cf-1e7694bf01fd.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_medicos = m
+		mode: import
+		source =
+				let
+				    Origen = MySQL.Database("brighhvxoryhwrvn5zun-mysql.services.clever-cloud.com", "brighhvxoryhwrvn5zun", [ReturnSingleDatabase=true]),
+				    almacen_citas_v2_dim_medicos = Origen{[Schema="brighhvxoryhwrvn5zun",Item="dim_medicos"]}[Data]
+				in
+				    almacen_citas_v2_dim_medicos
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
+

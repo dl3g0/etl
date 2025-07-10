@@ -1,0 +1,64 @@
+relationship 5f63dd1c-b6c9-4bf4-ab03-5883eba21edb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: citas_hechos.fecha_hora_cita
+	toColumn: LocalDateTable_907847ac-413a-42ab-bd60-217ffbded659.Date
+
+relationship 04da7334-41db-4d1d-9d3b-d3d4cd1f7a42
+	joinOnDateBehavior: datePartOnly
+	fromColumn: citas_hechos.fecha_carga
+	toColumn: LocalDateTable_5f81e7e9-9364-43bb-81bf-722c2ae40d69.Date
+
+relationship 54f9ab68-5a24-4eca-b018-aad1c7f88461
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_medicos.fecha_carga
+	toColumn: LocalDateTable_46b5900e-2153-4718-a4cf-1e7694bf01fd.Date
+
+relationship 3c2e8797-42c4-4212-800f-1431c4a3b3ff
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_especialidades.fecha_carga
+	toColumn: LocalDateTable_7d194d34-ee46-4da9-9e95-a70b5fc672de.Date
+
+relationship 938632e4-345b-4e09-af80-023175b5a6b2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_tiempo.fecha
+	toColumn: LocalDateTable_638456c6-8a69-4f99-9951-750a01df2599.Date
+
+relationship abda2c27-a3ae-4ed4-8f27-41dbefac9be4
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_tiempo.fecha_carga
+	toColumn: LocalDateTable_d8708653-abdc-4ecb-bac7-8c0c0dc52960.Date
+
+relationship 9478092a-1e7c-4409-b91c-f501632a2143
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_pacientes.fecha_nacimiento
+	toColumn: LocalDateTable_ac47db3d-64bb-4523-ac85-e12333ea468d.Date
+
+relationship 53990a2f-1156-4919-855c-8c752e85761b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_pacientes.fecha_carga
+	toColumn: LocalDateTable_b94035ee-f9f9-46e5-9693-29cfe82160c6.Date
+
+relationship 4767fef3-6717-46dd-8004-fd0a95ef8fb2
+	fromColumn: citas_hechos.id_medico_sk
+	toColumn: dim_medicos.id_medico_sk
+
+	annotation PBI_IsFromSource = FS
+
+relationship f3603571-2831-44f3-8ef5-b4aed8a7898f
+	fromColumn: citas_hechos.id_paciente_sk
+	toColumn: dim_pacientes.id_paciente_sk
+
+	annotation PBI_IsFromSource = FS
+
+relationship b1aa3c48-72e7-4a0a-bdfa-696b1514a76b
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: citas_hechos.id_tiempo_sk
+	toColumn: dim_tiempo.id_tiempo_sk
+
+	annotation PBI_IsFromSource = FS
+
+relationship 1d16885c-129b-acd0-e725-1a28038d36aa
+	fromColumn: dim_medicos.id_especialidad
+	toColumn: dim_especialidades.id_especialidad
+

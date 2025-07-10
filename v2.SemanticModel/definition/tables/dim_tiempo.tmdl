@@ -1,0 +1,124 @@
+table dim_tiempo
+	lineageTag: 214a9d02-e28b-4fe6-a51c-2cbed3ed2b08
+
+	column id_tiempo_sk
+		dataType: string
+		lineageTag: 5a000a31-f9db-481e-9dea-c318896ac021
+		summarizeBy: none
+		sourceColumn: id_tiempo_sk
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 0e84b1f1-c15f-4ff2-8d22-f74947e92acf
+		summarizeBy: none
+		sourceColumn: fecha
+
+		variation Variación
+			isDefault
+			relationship: 938632e4-345b-4e09-af80-023175b5a6b2
+			defaultHierarchy: LocalDateTable_638456c6-8a69-4f99-9951-750a01df2599.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column anio
+		dataType: int64
+		formatString: 0
+		lineageTag: 713e15b5-09ae-4336-bc1d-236ece2eed77
+		summarizeBy: sum
+		sourceColumn: anio
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes
+		dataType: int64
+		formatString: 0
+		lineageTag: fa1f8b33-040d-4b6c-8c6f-cbf1c7b5d3d6
+		summarizeBy: sum
+		sourceColumn: mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column dia
+		dataType: int64
+		formatString: 0
+		lineageTag: e53d45cc-70ab-4ffd-9520-47a595995f18
+		summarizeBy: sum
+		sourceColumn: dia
+
+		annotation SummarizationSetBy = Automatic
+
+	column hora
+		dataType: int64
+		formatString: 0
+		lineageTag: 1f26fefc-b586-498f-8088-54d62d79883d
+		summarizeBy: sum
+		sourceColumn: hora
+
+		annotation SummarizationSetBy = Automatic
+
+	column minuto
+		dataType: int64
+		formatString: 0
+		lineageTag: cd6fff5f-1e8e-48cb-81b6-6b4bd6021c3a
+		summarizeBy: sum
+		sourceColumn: minuto
+
+		annotation SummarizationSetBy = Automatic
+
+	column segundo
+		dataType: int64
+		formatString: 0
+		lineageTag: 9cb4af39-ffcd-4af6-bb14-0cd5f12ae377
+		summarizeBy: sum
+		sourceColumn: segundo
+
+		annotation SummarizationSetBy = Automatic
+
+	column nombre_mes
+		dataType: string
+		lineageTag: f470b8b9-4990-4a44-aa09-48d5cab3cbd1
+		summarizeBy: none
+		sourceColumn: nombre_mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column dia_semana
+		dataType: string
+		lineageTag: e123a8b7-00b7-4f53-b0d0-bf5bfb3748fc
+		summarizeBy: none
+		sourceColumn: dia_semana
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha_carga
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d6137642-af8e-420e-8358-886056862b36
+		summarizeBy: none
+		sourceColumn: fecha_carga
+
+		variation Variación
+			isDefault
+			relationship: abda2c27-a3ae-4ed4-8f27-41dbefac9be4
+			defaultHierarchy: LocalDateTable_d8708653-abdc-4ecb-bac7-8c0c0dc52960.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_tiempo = m
+		mode: import
+		source =
+				let
+				    Origen = MySQL.Database("brighhvxoryhwrvn5zun-mysql.services.clever-cloud.com", "brighhvxoryhwrvn5zun", [ReturnSingleDatabase=true]),
+				    almacen_citas_v2_dim_tiempo = Origen{[Schema="brighhvxoryhwrvn5zun",Item="dim_tiempo"]}[Data]
+				in
+				    almacen_citas_v2_dim_tiempo
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
+

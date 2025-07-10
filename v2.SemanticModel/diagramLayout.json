@@ -1,0 +1,85 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 199.49989676828656,
+            "y": 302.47256192525776
+          },
+          "nodeIndex": "citas_hechos",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 868.50366657500535,
+            "y": 152.70752467859245
+          },
+          "nodeIndex": "dim_especialidades",
+          "nodeLineageTag": "ee7ecaae-398b-473e-8207-007163ee2e37",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": -50
+          },
+          "nodeIndex": "dim_tiempo",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 541.50366657500558,
+            "y": 0
+          },
+          "nodeIndex": "dim_pacientes",
+          "nodeLineageTag": "e7aa496f-7857-4b3b-b824-b4222c4bcdf3",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 635.04115680551558,
+            "y": 493.4150493571849
+          },
+          "nodeIndex": "dim_medicos",
+          "nodeLineageTag": "8054307f-be92-48dd-a436-1adbfcadc7a9",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Todas las tablas",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas las tablas",
+  "defaultDiagram": "Todas las tablas"
+}

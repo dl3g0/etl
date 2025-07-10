@@ -1,0 +1,109 @@
+table dim_pacientes
+	lineageTag: e7aa496f-7857-4b3b-b824-b4222c4bcdf3
+
+	column id_paciente_sk
+		dataType: string
+		lineageTag: b5abd230-cd9e-47e6-a9c7-8058506f9fa7
+		summarizeBy: none
+		sourceColumn: id_paciente_sk
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_paciente
+		dataType: string
+		lineageTag: 8d1243de-f472-441d-bb3f-d91eafd6fe6e
+		summarizeBy: none
+		sourceColumn: id_paciente
+
+		annotation SummarizationSetBy = Automatic
+
+	column apellido
+		dataType: string
+		lineageTag: 16ba28dc-213c-4bfa-92f0-365cb6c5ab07
+		summarizeBy: none
+		sourceColumn: apellido
+
+		annotation SummarizationSetBy = Automatic
+
+	column direccion
+		dataType: string
+		lineageTag: acdf5a96-26f5-4bc9-af1b-f47431ec2679
+		summarizeBy: none
+		sourceColumn: direccion
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha_nacimiento
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 4fb4c89d-1931-4946-9b22-6e23aa9722f3
+		summarizeBy: none
+		sourceColumn: fecha_nacimiento
+
+		variation Variación
+			isDefault
+			relationship: 9478092a-1e7c-4409-b91c-f501632a2143
+			defaultHierarchy: LocalDateTable_ac47db3d-64bb-4523-ac85-e12333ea468d.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column genero
+		dataType: string
+		lineageTag: 742e61ba-da83-4e1d-a9dd-e76a758819b5
+		summarizeBy: none
+		sourceColumn: genero
+
+		annotation SummarizationSetBy = Automatic
+
+	column nombre
+		dataType: string
+		lineageTag: b1c63a8e-1cd3-45b1-a641-70cf51b75550
+		summarizeBy: none
+		sourceColumn: nombre
+
+		annotation SummarizationSetBy = Automatic
+
+	column telefono
+		dataType: string
+		lineageTag: e4421b04-e577-4351-8716-04eed5d0d3cf
+		summarizeBy: none
+		sourceColumn: telefono
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha_carga
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: aa9d6432-24f7-4a6a-94cf-8942d7c26848
+		summarizeBy: none
+		sourceColumn: fecha_carga
+
+		variation Variación
+			isDefault
+			relationship: 53990a2f-1156-4919-855c-8c752e85761b
+			defaultHierarchy: LocalDateTable_b94035ee-f9f9-46e5-9693-29cfe82160c6.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Edad = DATEDIFF('dim_pacientes'[fecha_nacimiento], TODAY(), YEAR)
+		formatString: 0
+		lineageTag: 3f7c4d5c-1317-4a6d-98d2-a85e662119d0
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_pacientes = m
+		mode: import
+		source =
+				let
+				    Origen = MySQL.Database("brighhvxoryhwrvn5zun-mysql.services.clever-cloud.com", "brighhvxoryhwrvn5zun", [ReturnSingleDatabase=true]),
+				    almacen_citas_v2_dim_pacientes = Origen{[Schema="brighhvxoryhwrvn5zun",Item="dim_pacientes"]}[Data]
+				in
+				    almacen_citas_v2_dim_pacientes
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
+
