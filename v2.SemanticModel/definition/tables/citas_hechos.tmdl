@@ -186,8 +186,8 @@ table citas_hechos
 		mode: import
 		source =
 				let
-				    Origen = MySQL.Database("brighhvxoryhwrvn5zun-mysql.services.clever-cloud.com", "brighhvxoryhwrvn5zun", [ReturnSingleDatabase=true]),
-				    almacen_citas_v2_citas_hechos = Origen{[Schema="brighhvxoryhwrvn5zun",Item="citas_hechos"]}[Data]
+				    Origen = MySQL.Database("dborigen.mysql.database.azure.com", "db_destino", [ReturnSingleDatabase=true]),
+				    almacen_citas_v2_citas_hechos = Origen{[Schema="db_destino",Item="citas_hechos"]}[Data]
 				in
 				    almacen_citas_v2_citas_hechos
 

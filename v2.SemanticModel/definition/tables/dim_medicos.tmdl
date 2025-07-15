@@ -75,8 +75,8 @@ table dim_medicos
 		mode: import
 		source =
 				let
-				    Origen = MySQL.Database("brighhvxoryhwrvn5zun-mysql.services.clever-cloud.com", "brighhvxoryhwrvn5zun", [ReturnSingleDatabase=true]),
-				    almacen_citas_v2_dim_medicos = Origen{[Schema="brighhvxoryhwrvn5zun",Item="dim_medicos"]}[Data]
+				    Origen = MySQL.Database("dborigen.mysql.database.azure.com", "db_destino", [ReturnSingleDatabase=true]),
+				    almacen_citas_v2_dim_medicos = Origen{[Schema="db_destino",Item="dim_medicos"]}[Data]
 				in
 				    almacen_citas_v2_dim_medicos
 

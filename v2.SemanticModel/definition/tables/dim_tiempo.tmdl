@@ -113,8 +113,8 @@ table dim_tiempo
 		mode: import
 		source =
 				let
-				    Origen = MySQL.Database("brighhvxoryhwrvn5zun-mysql.services.clever-cloud.com", "brighhvxoryhwrvn5zun", [ReturnSingleDatabase=true]),
-				    almacen_citas_v2_dim_tiempo = Origen{[Schema="brighhvxoryhwrvn5zun",Item="dim_tiempo"]}[Data]
+				    Origen = MySQL.Database("dborigen.mysql.database.azure.com", "db_destino", [ReturnSingleDatabase=true]),
+				    almacen_citas_v2_dim_tiempo = Origen{[Schema="db_destino",Item="dim_tiempo"]}[Data]
 				in
 				    almacen_citas_v2_dim_tiempo
 
