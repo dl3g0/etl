@@ -15,17 +15,17 @@ annotation PBIDesktopVersion = 2.142.1277.0 (25.04)+014fde450f93691fc9537f0758d7
 annotation PBI_ProTooling = ["DevMode"]
 
 ref table citas_hechos
+ref table dim_medicos
+ref table dim_especialidades
+ref table dim_tiempo
+ref table dim_pacientes
 ref table DateTableTemplate_70ed0c5c-e452-40b6-afee-ae7282f3e2ea
 ref table LocalDateTable_88cd2777-d547-4459-943f-b2b14cea13ba
 ref table LocalDateTable_183e3439-22cd-4387-901b-ced9da262d52
-ref table dim_especialidades
 ref table LocalDateTable_5b9e16ac-e3f1-4eb3-8d0a-4823c1d06820
-ref table dim_medicos
 ref table LocalDateTable_b25868ff-953d-45a8-ae7e-995934110842
-ref table dim_pacientes
 ref table LocalDateTable_c387b0cd-1141-4ac6-800c-20b94aadf973
 ref table LocalDateTable_c4a242e3-74f5-4166-b0e7-039ed34cd9d6
-ref table dim_tiempo
 ref table LocalDateTable_25f02e90-da99-42ba-bf4a-34735aaa835f
 ref table LocalDateTable_78077aa7-929d-42bb-913e-e7d4a739546e
 

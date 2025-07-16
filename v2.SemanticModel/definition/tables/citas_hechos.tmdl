@@ -1,18 +1,9 @@
 table citas_hechos
 	lineageTag: ee63b444-457b-43a3-a9e6-f19c8493c83c
 
-	measure 'Citas Atendidas' = ```
-			CALCULATE(
-			    COUNT(citas_hechos[id_cita]), 
-			    citas_hechos[estado_cita] = "Atendida"
-			)
-			```
+	measure 'Total de citas' = COUNT('citas_hechos'[id_cita])
 		formatString: 0
-		lineageTag: be7da173-4c21-4ff7-80da-c357ff419fa1
-
-	measure 'Citas Atendidas en Horas Pico' = CALCULATE([Citas Atendidas], FILTER('dim_tiempo', 'dim_tiempo'[hora] >= 9 && 'dim_tiempo'[hora] <= 17))
-		formatString: 0
-		lineageTag: bb7ef0fa-8c0a-463d-82a4-196161800eef
+		lineageTag: 94699ce3-2c4a-4731-9349-9401320365ca
 
 	measure 'Citas Canceladas' = ```
 			CALCULATE(
@@ -22,22 +13,6 @@ table citas_hechos
 			```
 		formatString: 0
 		lineageTag: f6b061b7-cd50-445b-a663-ed1df2a960b0
-
-	measure 'Citas programadas' = ```
-			
-			CALCULATE(
-			    COUNT(citas_hechos[id_cita]), 
-			    citas_hechos[estado_cita] = "Programada"
-			)
-			```
-		formatString: 0
-		lineageTag: e6c1829a-2ac5-4a47-b7ce-ac9875f14786
-
-	measure 'Citas Promedio por Médico' = DIVIDE([Total de citas], [Medicos unicos], 0)
-		lineageTag: b1b6d63e-6db0-4a70-a578-70bb5893cbce
-
-	measure 'Citas Promedio por Paciente' = DIVIDE([Total de citas], [Pacientes unicos], 0)
-		lineageTag: 73dbc7a1-3fa1-4d59-ae7a-8b8a6e483d67
 
 	measure 'Citas Reprogramadas' = ```
 			
@@ -49,13 +24,24 @@ table citas_hechos
 		formatString: 0
 		lineageTag: 5ed5c102-0e02-45c9-92c8-79acd20418dd
 
-	measure 'Medicos unicos' = DISTINCTCOUNT('citas_hechos'[id_medico_sk])
+	measure 'Citas programadas' = ```
+			
+			CALCULATE(
+			    COUNT(citas_hechos[id_cita]), 
+			    citas_hechos[estado_cita] = "Programada"
+			)
+			```
 		formatString: 0
-		lineageTag: 88e5d01d-dd9b-4f76-bdae-de7084178001
+		lineageTag: e6c1829a-2ac5-4a47-b7ce-ac9875f14786
 
-	measure 'Pacientes unicos' = DISTINCTCOUNT('citas_hechos'[id_paciente_sk])
+	measure 'Citas Atendidas' = ```
+			CALCULATE(
+			    COUNT(citas_hechos[id_cita]), 
+			    citas_hechos[estado_cita] = "Atendida"
+			)
+			```
 		formatString: 0
-		lineageTag: 2370f32e-e028-4db5-a462-f22b350fd0c3
+		lineageTag: be7da173-4c21-4ff7-80da-c357ff419fa1
 
 	measure 'Tasa de Atención' =
 			
@@ -90,9 +76,23 @@ table citas_hechos
 			)
 		lineageTag: 4d08d653-6f69-4188-a97a-14a402d348ee
 
-	measure 'Total de citas' = COUNT('citas_hechos'[id_cita])
+	measure 'Pacientes unicos' = DISTINCTCOUNT('citas_hechos'[id_paciente_sk])
 		formatString: 0
-		lineageTag: 94699ce3-2c4a-4731-9349-9401320365ca
+		lineageTag: 2370f32e-e028-4db5-a462-f22b350fd0c3
+
+	measure 'Medicos unicos' = DISTINCTCOUNT('citas_hechos'[id_medico_sk])
+		formatString: 0
+		lineageTag: 88e5d01d-dd9b-4f76-bdae-de7084178001
+
+	measure 'Citas Promedio por Paciente' = DIVIDE([Total de citas], [Pacientes unicos], 0)
+		lineageTag: 73dbc7a1-3fa1-4d59-ae7a-8b8a6e483d67
+
+	measure 'Citas Promedio por Médico' = DIVIDE([Total de citas], [Medicos unicos], 0)
+		lineageTag: b1b6d63e-6db0-4a70-a578-70bb5893cbce
+
+	measure 'Citas Atendidas en Horas Pico' = CALCULATE([Citas Atendidas], FILTER('dim_tiempo', 'dim_tiempo'[hora] >= 9 && 'dim_tiempo'[hora] <= 17))
+		formatString: 0
+		lineageTag: bb7ef0fa-8c0a-463d-82a4-196161800eef
 
 	column id_cita
 		dataType: string
