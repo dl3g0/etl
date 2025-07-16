@@ -10,10 +10,11 @@
       "nodes": [
         {
           "location": {
-            "x": 199.49989676828656,
-            "y": 302.47256192525776
+            "x": 187.49989676828656,
+            "y": 566.47256192525776
           },
           "nodeIndex": "citas_hechos",
+          "nodeLineageTag": "ee63b444-457b-43a3-a9e6-f19c8493c83c",
           "size": {
             "height": 272,
             "width": 234
@@ -22,13 +23,39 @@
         },
         {
           "location": {
-            "x": 868.50366657500535,
-            "y": 152.70752467859245
+            "x": 1176.5036665750054,
+            "y": 469.70752467859245
           },
           "nodeIndex": "dim_especialidades",
-          "nodeLineageTag": "ee7ecaae-398b-473e-8207-007163ee2e37",
+          "nodeLineageTag": "4a0932dc-fb4f-491d-9e57-221e8691a02b",
           "size": {
             "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 649.04115680551558,
+            "y": 527.4150493571849
+          },
+          "nodeIndex": "dim_medicos",
+          "nodeLineageTag": "649c07e9-5bc5-40f1-aaf6-3f6beec324c6",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 821.50366657500558,
+            "y": 129.7021282259733
+          },
+          "nodeIndex": "dim_pacientes",
+          "nodeLineageTag": "9159f4d3-ae1b-4194-aba3-25b4b36b0e61",
+          "size": {
+            "height": 296,
             "width": 234
           },
           "zIndex": 0
@@ -41,32 +68,6 @@
           "nodeIndex": "dim_tiempo",
           "size": {
             "height": 300,
-            "width": 234
-          },
-          "zIndex": 0
-        },
-        {
-          "location": {
-            "x": 541.50366657500558,
-            "y": 0
-          },
-          "nodeIndex": "dim_pacientes",
-          "nodeLineageTag": "e7aa496f-7857-4b3b-b824-b4222c4bcdf3",
-          "size": {
-            "height": 296,
-            "width": 234
-          },
-          "zIndex": 0
-        },
-        {
-          "location": {
-            "x": 635.04115680551558,
-            "y": 493.4150493571849
-          },
-          "nodeIndex": "dim_medicos",
-          "nodeLineageTag": "8054307f-be92-48dd-a436-1adbfcadc7a9",
-          "size": {
-            "height": 272,
             "width": 234
           },
           "zIndex": 0

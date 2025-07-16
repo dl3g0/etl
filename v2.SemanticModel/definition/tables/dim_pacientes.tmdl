@@ -1,9 +1,9 @@
 table dim_pacientes
-	lineageTag: e7aa496f-7857-4b3b-b824-b4222c4bcdf3
+	lineageTag: 9159f4d3-ae1b-4194-aba3-25b4b36b0e61
 
 	column id_paciente_sk
 		dataType: string
-		lineageTag: b5abd230-cd9e-47e6-a9c7-8058506f9fa7
+		lineageTag: 17e5c79a-ec7c-4a35-85a8-ed358836a830
 		summarizeBy: none
 		sourceColumn: id_paciente_sk
 
@@ -11,7 +11,7 @@ table dim_pacientes
 
 	column id_paciente
 		dataType: string
-		lineageTag: 8d1243de-f472-441d-bb3f-d91eafd6fe6e
+		lineageTag: a0600c40-63ce-46f0-b986-12887e2888ae
 		summarizeBy: none
 		sourceColumn: id_paciente
 
@@ -19,7 +19,7 @@ table dim_pacientes
 
 	column apellido
 		dataType: string
-		lineageTag: 16ba28dc-213c-4bfa-92f0-365cb6c5ab07
+		lineageTag: 26ea2388-8b18-4039-9d3e-e92d67a35c4d
 		summarizeBy: none
 		sourceColumn: apellido
 
@@ -27,7 +27,7 @@ table dim_pacientes
 
 	column direccion
 		dataType: string
-		lineageTag: acdf5a96-26f5-4bc9-af1b-f47431ec2679
+		lineageTag: 104b448c-19b2-4c93-9cb3-4aea03613f37
 		summarizeBy: none
 		sourceColumn: direccion
 
@@ -36,14 +36,14 @@ table dim_pacientes
 	column fecha_nacimiento
 		dataType: dateTime
 		formatString: Long Date
-		lineageTag: 4fb4c89d-1931-4946-9b22-6e23aa9722f3
+		lineageTag: f6ea4728-7b11-4c2f-b855-8a0a098d638e
 		summarizeBy: none
 		sourceColumn: fecha_nacimiento
 
 		variation Variación
 			isDefault
-			relationship: 9478092a-1e7c-4409-b91c-f501632a2143
-			defaultHierarchy: LocalDateTable_ac47db3d-64bb-4523-ac85-e12333ea468d.'Jerarquía de fechas'
+			relationship: 9315e734-537e-45ff-9f5d-8e449f9ec430
+			defaultHierarchy: LocalDateTable_c387b0cd-1141-4ac6-800c-20b94aadf973.'Jerarquía de fechas'
 
 		annotation SummarizationSetBy = Automatic
 
@@ -51,7 +51,7 @@ table dim_pacientes
 
 	column genero
 		dataType: string
-		lineageTag: 742e61ba-da83-4e1d-a9dd-e76a758819b5
+		lineageTag: c08336fd-ffe5-4a88-81e1-164b008f9a6c
 		summarizeBy: none
 		sourceColumn: genero
 
@@ -59,7 +59,7 @@ table dim_pacientes
 
 	column nombre
 		dataType: string
-		lineageTag: b1c63a8e-1cd3-45b1-a641-70cf51b75550
+		lineageTag: 59e89ce8-5411-403b-a7a2-6037a094e8c9
 		summarizeBy: none
 		sourceColumn: nombre
 
@@ -67,7 +67,7 @@ table dim_pacientes
 
 	column telefono
 		dataType: string
-		lineageTag: e4421b04-e577-4351-8716-04eed5d0d3cf
+		lineageTag: ea7b171d-b46c-4b90-8911-a51adead6781
 		summarizeBy: none
 		sourceColumn: telefono
 
@@ -76,20 +76,20 @@ table dim_pacientes
 	column fecha_carga
 		dataType: dateTime
 		formatString: General Date
-		lineageTag: aa9d6432-24f7-4a6a-94cf-8942d7c26848
+		lineageTag: 83cf5c2e-6812-4498-828d-9be222b6f4ee
 		summarizeBy: none
 		sourceColumn: fecha_carga
 
 		variation Variación
 			isDefault
-			relationship: 53990a2f-1156-4919-855c-8c752e85761b
-			defaultHierarchy: LocalDateTable_b94035ee-f9f9-46e5-9693-29cfe82160c6.'Jerarquía de fechas'
+			relationship: 8a663e0b-36f5-4eb2-9e7a-c7206fe37482
+			defaultHierarchy: LocalDateTable_c4a242e3-74f5-4166-b0e7-039ed34cd9d6.'Jerarquía de fechas'
 
 		annotation SummarizationSetBy = Automatic
 
 	column Edad = DATEDIFF('dim_pacientes'[fecha_nacimiento], TODAY(), YEAR)
 		formatString: 0
-		lineageTag: 3f7c4d5c-1317-4a6d-98d2-a85e662119d0
+		lineageTag: 61705714-e307-43c6-8ffb-28b725a88957
 		summarizeBy: sum
 
 		annotation SummarizationSetBy = Automatic
@@ -99,11 +99,7 @@ table dim_pacientes
 		source =
 				let
 				    Origen = MySQL.Database("dborigen.mysql.database.azure.com", "db_destino", [ReturnSingleDatabase=true]),
-				    almacen_citas_v2_dim_pacientes = Origen{[Schema="db_destino",Item="dim_pacientes"]}[Data]
+				    db_destino_dim_pacientes = Origen{[Schema="db_destino",Item="dim_pacientes"]}[Data]
 				in
-				    almacen_citas_v2_dim_pacientes
-
-	annotation PBI_ResultType = Table
-
-	annotation PBI_NavigationStepName = Navegación
+				    db_destino_dim_pacientes
 

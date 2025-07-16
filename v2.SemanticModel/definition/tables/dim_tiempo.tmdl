@@ -1,9 +1,9 @@
 table dim_tiempo
-	lineageTag: 214a9d02-e28b-4fe6-a51c-2cbed3ed2b08
+	lineageTag: d6b2e614-1f61-405b-8d3c-4d6e1b269b69
 
 	column id_tiempo_sk
 		dataType: string
-		lineageTag: 5a000a31-f9db-481e-9dea-c318896ac021
+		lineageTag: f1ba9525-1c32-4c99-89b1-c8b4ccb5222e
 		summarizeBy: none
 		sourceColumn: id_tiempo_sk
 
@@ -12,14 +12,14 @@ table dim_tiempo
 	column fecha
 		dataType: dateTime
 		formatString: Long Date
-		lineageTag: 0e84b1f1-c15f-4ff2-8d22-f74947e92acf
+		lineageTag: 154c3734-38a9-437d-ba62-609cf2611d45
 		summarizeBy: none
 		sourceColumn: fecha
 
 		variation Variación
 			isDefault
-			relationship: 938632e4-345b-4e09-af80-023175b5a6b2
-			defaultHierarchy: LocalDateTable_638456c6-8a69-4f99-9951-750a01df2599.'Jerarquía de fechas'
+			relationship: a4e8385b-259f-4b8e-b3aa-61171fcb4b95
+			defaultHierarchy: LocalDateTable_25f02e90-da99-42ba-bf4a-34735aaa835f.'Jerarquía de fechas'
 
 		annotation SummarizationSetBy = Automatic
 
@@ -28,7 +28,7 @@ table dim_tiempo
 	column anio
 		dataType: int64
 		formatString: 0
-		lineageTag: 713e15b5-09ae-4336-bc1d-236ece2eed77
+		lineageTag: 8ef769ef-b2db-4339-9d6f-47a3108d7fac
 		summarizeBy: sum
 		sourceColumn: anio
 
@@ -37,7 +37,7 @@ table dim_tiempo
 	column mes
 		dataType: int64
 		formatString: 0
-		lineageTag: fa1f8b33-040d-4b6c-8c6f-cbf1c7b5d3d6
+		lineageTag: feca1b2a-6c62-496c-b8b8-f6028312e402
 		summarizeBy: sum
 		sourceColumn: mes
 
@@ -46,7 +46,7 @@ table dim_tiempo
 	column dia
 		dataType: int64
 		formatString: 0
-		lineageTag: e53d45cc-70ab-4ffd-9520-47a595995f18
+		lineageTag: 5c59bb90-a3e1-49f9-ad78-8ae4a3391188
 		summarizeBy: sum
 		sourceColumn: dia
 
@@ -55,7 +55,7 @@ table dim_tiempo
 	column hora
 		dataType: int64
 		formatString: 0
-		lineageTag: 1f26fefc-b586-498f-8088-54d62d79883d
+		lineageTag: fbe9795b-5d67-47b6-b9ce-24bb5d0cb2c2
 		summarizeBy: sum
 		sourceColumn: hora
 
@@ -64,7 +64,7 @@ table dim_tiempo
 	column minuto
 		dataType: int64
 		formatString: 0
-		lineageTag: cd6fff5f-1e8e-48cb-81b6-6b4bd6021c3a
+		lineageTag: 07afb554-63e6-4b5e-9b9f-9b9ba1fd756c
 		summarizeBy: sum
 		sourceColumn: minuto
 
@@ -73,7 +73,7 @@ table dim_tiempo
 	column segundo
 		dataType: int64
 		formatString: 0
-		lineageTag: 9cb4af39-ffcd-4af6-bb14-0cd5f12ae377
+		lineageTag: 28906880-7ea3-4235-8e09-cf6cf26f850f
 		summarizeBy: sum
 		sourceColumn: segundo
 
@@ -81,7 +81,7 @@ table dim_tiempo
 
 	column nombre_mes
 		dataType: string
-		lineageTag: f470b8b9-4990-4a44-aa09-48d5cab3cbd1
+		lineageTag: 755c1a2e-e3c3-41ed-8d94-a974c3d3907c
 		summarizeBy: none
 		sourceColumn: nombre_mes
 
@@ -89,7 +89,7 @@ table dim_tiempo
 
 	column dia_semana
 		dataType: string
-		lineageTag: e123a8b7-00b7-4f53-b0d0-bf5bfb3748fc
+		lineageTag: 0cb98162-015b-4de7-975c-8ce97cf36a41
 		summarizeBy: none
 		sourceColumn: dia_semana
 
@@ -98,14 +98,14 @@ table dim_tiempo
 	column fecha_carga
 		dataType: dateTime
 		formatString: General Date
-		lineageTag: d6137642-af8e-420e-8358-886056862b36
+		lineageTag: fd02caf6-8069-4ba3-9b2f-1f593505edbd
 		summarizeBy: none
 		sourceColumn: fecha_carga
 
 		variation Variación
 			isDefault
-			relationship: abda2c27-a3ae-4ed4-8f27-41dbefac9be4
-			defaultHierarchy: LocalDateTable_d8708653-abdc-4ecb-bac7-8c0c0dc52960.'Jerarquía de fechas'
+			relationship: 5d3bd563-fa3c-4732-9f20-54a67a703355
+			defaultHierarchy: LocalDateTable_78077aa7-929d-42bb-913e-e7d4a739546e.'Jerarquía de fechas'
 
 		annotation SummarizationSetBy = Automatic
 
@@ -114,11 +114,7 @@ table dim_tiempo
 		source =
 				let
 				    Origen = MySQL.Database("dborigen.mysql.database.azure.com", "db_destino", [ReturnSingleDatabase=true]),
-				    almacen_citas_v2_dim_tiempo = Origen{[Schema="db_destino",Item="dim_tiempo"]}[Data]
+				    db_destino_dim_tiempo = Origen{[Schema="db_destino",Item="dim_tiempo"]}[Data]
 				in
-				    almacen_citas_v2_dim_tiempo
-
-	annotation PBI_ResultType = Table
-
-	annotation PBI_NavigationStepName = Navegación
+				    db_destino_dim_tiempo
 

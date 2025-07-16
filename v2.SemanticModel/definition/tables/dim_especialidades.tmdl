@@ -1,9 +1,9 @@
 table dim_especialidades
-	lineageTag: ee7ecaae-398b-473e-8207-007163ee2e37
+	lineageTag: 4a0932dc-fb4f-491d-9e57-221e8691a02b
 
 	column id_especialidad_sk
 		dataType: string
-		lineageTag: 6d4cd506-eef6-4e54-a69a-792eacfaed6d
+		lineageTag: 9bdbf138-8b14-4a57-b50d-0a54f6361371
 		summarizeBy: none
 		sourceColumn: id_especialidad_sk
 
@@ -11,7 +11,7 @@ table dim_especialidades
 
 	column id_especialidad
 		dataType: string
-		lineageTag: ae7653a5-6455-431f-8838-081c3fdc903f
+		lineageTag: af0137f5-91c8-4bc2-9343-33bca9ffe301
 		summarizeBy: none
 		sourceColumn: id_especialidad
 
@@ -19,7 +19,7 @@ table dim_especialidades
 
 	column nombre_especialidad
 		dataType: string
-		lineageTag: a0cdad68-055f-469a-94c7-37afe22b0fde
+		lineageTag: 6512f3fd-b257-49dd-ac66-338402f26e18
 		summarizeBy: none
 		sourceColumn: nombre_especialidad
 
@@ -28,14 +28,14 @@ table dim_especialidades
 	column fecha_carga
 		dataType: dateTime
 		formatString: General Date
-		lineageTag: ee215517-602d-45f3-a6e0-ad9d1012b176
+		lineageTag: b12cac7c-6735-4d2b-9c29-d167dbc0cfc4
 		summarizeBy: none
 		sourceColumn: fecha_carga
 
 		variation Variación
 			isDefault
-			relationship: 3c2e8797-42c4-4212-800f-1431c4a3b3ff
-			defaultHierarchy: LocalDateTable_7d194d34-ee46-4da9-9e95-a70b5fc672de.'Jerarquía de fechas'
+			relationship: 39807910-6983-46ad-93f3-176f39566b7c
+			defaultHierarchy: LocalDateTable_5b9e16ac-e3f1-4eb3-8d0a-4823c1d06820.'Jerarquía de fechas'
 
 		annotation SummarizationSetBy = Automatic
 
@@ -44,11 +44,7 @@ table dim_especialidades
 		source =
 				let
 				    Origen = MySQL.Database("dborigen.mysql.database.azure.com", "db_destino", [ReturnSingleDatabase=true]),
-				    almacen_citas_v2_dim_especialidades = Origen{[Schema="db_destino",Item="dim_especialidades"]}[Data]
+				    db_destino_dim_especialidades = Origen{[Schema="db_destino",Item="dim_especialidades"]}[Data]
 				in
-				    almacen_citas_v2_dim_especialidades
-
-	annotation PBI_ResultType = Table
-
-	annotation PBI_NavigationStepName = Navegación
+				    db_destino_dim_especialidades
 

@@ -1,9 +1,9 @@
 table dim_medicos
-	lineageTag: 8054307f-be92-48dd-a436-1adbfcadc7a9
+	lineageTag: 649c07e9-5bc5-40f1-aaf6-3f6beec324c6
 
 	column id_medico_sk
 		dataType: string
-		lineageTag: 7a0a107e-f7ba-4640-b38f-e5c76f12062d
+		lineageTag: 3962c953-c5a6-41c2-b2cb-995cfc066299
 		summarizeBy: none
 		sourceColumn: id_medico_sk
 
@@ -11,7 +11,7 @@ table dim_medicos
 
 	column id_medico
 		dataType: string
-		lineageTag: a8bdf5f4-5b73-432d-a836-a6a38448d19c
+		lineageTag: dcab94df-bf26-48f4-9014-8752bc3fa62d
 		summarizeBy: none
 		sourceColumn: id_medico
 
@@ -19,7 +19,7 @@ table dim_medicos
 
 	column id_especialidad
 		dataType: string
-		lineageTag: a68cc474-905a-4dfd-b4e8-dad96c6a8f3a
+		lineageTag: 2ffb54ae-1416-494c-9c1f-48ee4f8fabc1
 		summarizeBy: none
 		sourceColumn: id_especialidad
 
@@ -27,7 +27,7 @@ table dim_medicos
 
 	column codigo_empleado
 		dataType: string
-		lineageTag: e8c563ab-6b94-41d2-854d-b715c5ce50f9
+		lineageTag: 63c775a5-96ea-471b-b508-864449784b41
 		summarizeBy: none
 		sourceColumn: codigo_empleado
 
@@ -35,7 +35,7 @@ table dim_medicos
 
 	column nombre
 		dataType: string
-		lineageTag: 02b209a7-dd01-4737-9a43-5cb822cb785c
+		lineageTag: ec367db5-98d0-429c-943a-acaa5b2a70ec
 		summarizeBy: none
 		sourceColumn: nombre
 
@@ -43,7 +43,7 @@ table dim_medicos
 
 	column apellido
 		dataType: string
-		lineageTag: e1f51459-efb7-42cc-9033-6c3cdcd51345
+		lineageTag: f03dc6de-1d0d-41fe-a23a-ec8b677a5b91
 		summarizeBy: none
 		sourceColumn: apellido
 
@@ -51,7 +51,7 @@ table dim_medicos
 
 	column genero
 		dataType: string
-		lineageTag: f2359acf-3bf7-4db9-a97c-f0dd7055d288
+		lineageTag: 9de8efd9-4628-4185-94f1-2d36bb3eac6a
 		summarizeBy: none
 		sourceColumn: genero
 
@@ -60,14 +60,14 @@ table dim_medicos
 	column fecha_carga
 		dataType: dateTime
 		formatString: General Date
-		lineageTag: 88e5754a-8523-4f3a-9695-79b2442d77b3
+		lineageTag: 7d92cdc4-54db-47e0-9f23-dcca8b78a563
 		summarizeBy: none
 		sourceColumn: fecha_carga
 
 		variation Variación
 			isDefault
-			relationship: 54f9ab68-5a24-4eca-b018-aad1c7f88461
-			defaultHierarchy: LocalDateTable_46b5900e-2153-4718-a4cf-1e7694bf01fd.'Jerarquía de fechas'
+			relationship: 0ed1ee2b-0741-427c-a9ed-e43d218b0794
+			defaultHierarchy: LocalDateTable_b25868ff-953d-45a8-ae7e-995934110842.'Jerarquía de fechas'
 
 		annotation SummarizationSetBy = Automatic
 
@@ -76,11 +76,7 @@ table dim_medicos
 		source =
 				let
 				    Origen = MySQL.Database("dborigen.mysql.database.azure.com", "db_destino", [ReturnSingleDatabase=true]),
-				    almacen_citas_v2_dim_medicos = Origen{[Schema="db_destino",Item="dim_medicos"]}[Data]
+				    db_destino_dim_medicos = Origen{[Schema="db_destino",Item="dim_medicos"]}[Data]
 				in
-				    almacen_citas_v2_dim_medicos
-
-	annotation PBI_ResultType = Table
-
-	annotation PBI_NavigationStepName = Navegación
+				    db_destino_dim_medicos
 

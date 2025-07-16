@@ -1,9 +1,18 @@
 table citas_hechos
-	lineageTag: 7bdec722-ad3a-4098-b224-0a4272b1b9eb
+	lineageTag: ee63b444-457b-43a3-a9e6-f19c8493c83c
 
-	measure 'Total de citas' = COUNT('citas_hechos'[id_cita])
+	measure 'Citas Atendidas' = ```
+			CALCULATE(
+			    COUNT(citas_hechos[id_cita]), 
+			    citas_hechos[estado_cita] = "Atendida"
+			)
+			```
 		formatString: 0
-		lineageTag: e5951872-d88a-4df9-8cf4-d91caaeb8739
+		lineageTag: be7da173-4c21-4ff7-80da-c357ff419fa1
+
+	measure 'Citas Atendidas en Horas Pico' = CALCULATE([Citas Atendidas], FILTER('dim_tiempo', 'dim_tiempo'[hora] >= 9 && 'dim_tiempo'[hora] <= 17))
+		formatString: 0
+		lineageTag: bb7ef0fa-8c0a-463d-82a4-196161800eef
 
 	measure 'Citas Canceladas' = ```
 			CALCULATE(
@@ -12,17 +21,7 @@ table citas_hechos
 			)
 			```
 		formatString: 0
-		lineageTag: 53f86d63-1d93-49a1-9dc9-a47b3a99c041
-
-	measure 'Citas Reprogramadas' = ```
-			
-			CALCULATE(
-			    COUNT(citas_hechos[id_cita]), 
-			    citas_hechos[estado_cita] = "Reprogramada"
-			)
-			```
-		formatString: 0
-		lineageTag: d39cba59-3c26-435c-a23a-f17d65ab64d3
+		lineageTag: f6b061b7-cd50-445b-a663-ed1df2a960b0
 
 	measure 'Citas programadas' = ```
 			
@@ -32,16 +31,31 @@ table citas_hechos
 			)
 			```
 		formatString: 0
-		lineageTag: 18b5d920-6013-426c-8fd5-e935675db786
+		lineageTag: e6c1829a-2ac5-4a47-b7ce-ac9875f14786
 
-	measure 'Citas Atendidas' = ```
+	measure 'Citas Promedio por Médico' = DIVIDE([Total de citas], [Medicos unicos], 0)
+		lineageTag: b1b6d63e-6db0-4a70-a578-70bb5893cbce
+
+	measure 'Citas Promedio por Paciente' = DIVIDE([Total de citas], [Pacientes unicos], 0)
+		lineageTag: 73dbc7a1-3fa1-4d59-ae7a-8b8a6e483d67
+
+	measure 'Citas Reprogramadas' = ```
+			
 			CALCULATE(
 			    COUNT(citas_hechos[id_cita]), 
-			    citas_hechos[estado_cita] = "Atendida"
+			    citas_hechos[estado_cita] = "Reprogramada"
 			)
 			```
 		formatString: 0
-		lineageTag: 5398add3-74e2-448c-abc5-aafbfdaa1487
+		lineageTag: 5ed5c102-0e02-45c9-92c8-79acd20418dd
+
+	measure 'Medicos unicos' = DISTINCTCOUNT('citas_hechos'[id_medico_sk])
+		formatString: 0
+		lineageTag: 88e5d01d-dd9b-4f76-bdae-de7084178001
+
+	measure 'Pacientes unicos' = DISTINCTCOUNT('citas_hechos'[id_paciente_sk])
+		formatString: 0
+		lineageTag: 2370f32e-e028-4db5-a462-f22b350fd0c3
 
 	measure 'Tasa de Atención' =
 			
@@ -50,9 +64,7 @@ table citas_hechos
 			    [Total de citas],
 			    0
 			)
-		lineageTag: 1d632e4f-a128-4cc4-9e2c-dcf2bf3c3038
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		lineageTag: cc94bac0-5bae-48f0-88a6-6c20b97e962c
 
 	measure 'Tasa de cancelacion' =
 			DIVIDE(
@@ -60,9 +72,7 @@ table citas_hechos
 			    [Total de citas],
 			    0
 			)
-		lineageTag: a691b5a0-1cad-4d72-a98a-d5a2356ffda9
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		lineageTag: 4c4d64bc-1ae6-4f0a-9ee6-4e142bdb2ca6
 
 	measure 'Tasa de programacion' =
 			DIVIDE(
@@ -70,9 +80,7 @@ table citas_hechos
 			    [Total de citas],
 			    0
 			)
-		lineageTag: 9fade778-227f-4b37-8608-bd397e1481d6
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		lineageTag: de731e72-e372-45e1-b06d-704f8dd27c0f
 
 	measure 'Tasa de reprogramacion' =
 			DIVIDE(
@@ -80,35 +88,15 @@ table citas_hechos
 			    [Total de citas],
 			    0
 			)
-		lineageTag: bb6ed4fe-f296-4a59-ad1e-43630ff5caac
+		lineageTag: 4d08d653-6f69-4188-a97a-14a402d348ee
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure 'Pacientes unicos' = DISTINCTCOUNT('citas_hechos'[id_paciente_sk])
+	measure 'Total de citas' = COUNT('citas_hechos'[id_cita])
 		formatString: 0
-		lineageTag: 01a89d73-8f64-400e-809b-5b6a5fddf562
-
-	measure 'Medicos unicos' = DISTINCTCOUNT('citas_hechos'[id_medico_sk])
-		formatString: 0
-		lineageTag: 1021666c-49de-45ad-a002-a48115ff8c4b
-
-	measure 'Citas Promedio por Paciente' = DIVIDE([Total de citas], [Pacientes unicos], 0)
-		lineageTag: 66361fc7-ed50-4912-acf2-541d61c1164e
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure 'Citas Promedio por Médico' = DIVIDE([Total de citas], [Medicos unicos], 0)
-		lineageTag: eca03b9c-8b0e-4c18-adf2-56d1ef48dd1c
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure 'Citas Atendidas en Horas Pico' = CALCULATE([Citas Atendidas], FILTER('dim_tiempo', 'dim_tiempo'[hora] >= 9 && 'dim_tiempo'[hora] <= 17))
-		formatString: 0
-		lineageTag: b210e685-2ada-4dcb-8bc5-753c0f7807dd
+		lineageTag: 94699ce3-2c4a-4731-9349-9401320365ca
 
 	column id_cita
 		dataType: string
-		lineageTag: 404c3621-cc14-467d-9a25-04ad222ed942
+		lineageTag: df1d0691-62fa-4595-bed3-7ba6a8732d6f
 		summarizeBy: none
 		sourceColumn: id_cita
 
@@ -116,7 +104,7 @@ table citas_hechos
 
 	column id_paciente_sk
 		dataType: string
-		lineageTag: 5b6b43db-9b16-4662-b642-c98cd7f66649
+		lineageTag: c1ea03a9-0492-40d8-b18d-e84bf8a47c6b
 		summarizeBy: none
 		sourceColumn: id_paciente_sk
 
@@ -124,7 +112,7 @@ table citas_hechos
 
 	column id_medico_sk
 		dataType: string
-		lineageTag: 0a8ca006-9c64-48c9-bc69-eaceb5cd7c7a
+		lineageTag: 58c74a79-bd7a-4a7f-b3e2-21403b4d0a35
 		summarizeBy: none
 		sourceColumn: id_medico_sk
 
@@ -132,7 +120,7 @@ table citas_hechos
 
 	column id_tiempo_sk
 		dataType: string
-		lineageTag: c459ea58-816a-4b7d-95a6-03b05a312b21
+		lineageTag: 72ed11ea-eb59-4a3e-bd80-400948dad77e
 		summarizeBy: none
 		sourceColumn: id_tiempo_sk
 
@@ -141,20 +129,20 @@ table citas_hechos
 	column fecha_hora_cita
 		dataType: dateTime
 		formatString: General Date
-		lineageTag: 6fd7bc03-d285-4f89-83c2-a20e42111f92
+		lineageTag: 42b8c854-abe9-4ea4-8030-e59efee621a9
 		summarizeBy: none
 		sourceColumn: fecha_hora_cita
 
 		variation Variación
 			isDefault
-			relationship: 5f63dd1c-b6c9-4bf4-ab03-5883eba21edb
-			defaultHierarchy: LocalDateTable_907847ac-413a-42ab-bd60-217ffbded659.'Jerarquía de fechas'
+			relationship: baed5e87-326b-42d8-b56e-bab069faaf82
+			defaultHierarchy: LocalDateTable_88cd2777-d547-4459-943f-b2b14cea13ba.'Jerarquía de fechas'
 
 		annotation SummarizationSetBy = Automatic
 
 	column estado_cita
 		dataType: string
-		lineageTag: 6cad3f3f-8d6f-4a73-a265-b206f79bfcc6
+		lineageTag: 124d50b2-82bb-4bc2-be9b-9895e3f1be14
 		summarizeBy: none
 		sourceColumn: estado_cita
 
@@ -162,7 +150,7 @@ table citas_hechos
 
 	column motivo_cita
 		dataType: string
-		lineageTag: 4ae406fd-5bc2-4224-aaad-dc1d88128650
+		lineageTag: 15f55fc3-4b5c-4083-8382-353b471f0ea6
 		summarizeBy: none
 		sourceColumn: motivo_cita
 
@@ -171,14 +159,14 @@ table citas_hechos
 	column fecha_carga
 		dataType: dateTime
 		formatString: General Date
-		lineageTag: 9c87bce1-4ca1-483c-93ce-a1d6a0f3ac9c
+		lineageTag: 63b80af1-f17a-469d-b05e-c2833f37438d
 		summarizeBy: none
 		sourceColumn: fecha_carga
 
 		variation Variación
 			isDefault
-			relationship: 04da7334-41db-4d1d-9d3b-d3d4cd1f7a42
-			defaultHierarchy: LocalDateTable_5f81e7e9-9364-43bb-81bf-722c2ae40d69.'Jerarquía de fechas'
+			relationship: 2408ebae-7ec1-4fca-8c01-0cf7dd40fc3e
+			defaultHierarchy: LocalDateTable_183e3439-22cd-4387-901b-ced9da262d52.'Jerarquía de fechas'
 
 		annotation SummarizationSetBy = Automatic
 
@@ -187,11 +175,7 @@ table citas_hechos
 		source =
 				let
 				    Origen = MySQL.Database("dborigen.mysql.database.azure.com", "db_destino", [ReturnSingleDatabase=true]),
-				    almacen_citas_v2_citas_hechos = Origen{[Schema="db_destino",Item="citas_hechos"]}[Data]
+				    db_destino_citas_hechos = Origen{[Schema="db_destino",Item="citas_hechos"]}[Data]
 				in
-				    almacen_citas_v2_citas_hechos
-
-	annotation PBI_ResultType = Table
-
-	annotation PBI_NavigationStepName = Navegación
+				    db_destino_citas_hechos
 

@@ -6,7 +6,7 @@ model Model
 		legacyRedirects
 		returnErrorValuesAsNull
 
-annotation PBI_QueryOrder = ["citas_hechos","dim_medicos","dim_especialidades","dim_tiempo","dim_pacientes"]
+annotation PBI_QueryOrder = ["citas_hechos","dim_especialidades","dim_medicos","dim_pacientes","dim_tiempo"]
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
@@ -15,19 +15,19 @@ annotation PBIDesktopVersion = 2.142.1277.0 (25.04)+014fde450f93691fc9537f0758d7
 annotation PBI_ProTooling = ["DevMode"]
 
 ref table citas_hechos
-ref table DateTableTemplate_9e04f569-b7b5-4017-9312-11cf5e686d00
-ref table LocalDateTable_907847ac-413a-42ab-bd60-217ffbded659
-ref table LocalDateTable_5f81e7e9-9364-43bb-81bf-722c2ae40d69
-ref table dim_medicos
-ref table LocalDateTable_46b5900e-2153-4718-a4cf-1e7694bf01fd
+ref table DateTableTemplate_70ed0c5c-e452-40b6-afee-ae7282f3e2ea
+ref table LocalDateTable_88cd2777-d547-4459-943f-b2b14cea13ba
+ref table LocalDateTable_183e3439-22cd-4387-901b-ced9da262d52
 ref table dim_especialidades
-ref table LocalDateTable_7d194d34-ee46-4da9-9e95-a70b5fc672de
-ref table dim_tiempo
-ref table LocalDateTable_638456c6-8a69-4f99-9951-750a01df2599
-ref table LocalDateTable_d8708653-abdc-4ecb-bac7-8c0c0dc52960
+ref table LocalDateTable_5b9e16ac-e3f1-4eb3-8d0a-4823c1d06820
+ref table dim_medicos
+ref table LocalDateTable_b25868ff-953d-45a8-ae7e-995934110842
 ref table dim_pacientes
-ref table LocalDateTable_ac47db3d-64bb-4523-ac85-e12333ea468d
-ref table LocalDateTable_b94035ee-f9f9-46e5-9693-29cfe82160c6
+ref table LocalDateTable_c387b0cd-1141-4ac6-800c-20b94aadf973
+ref table LocalDateTable_c4a242e3-74f5-4166-b0e7-039ed34cd9d6
+ref table dim_tiempo
+ref table LocalDateTable_25f02e90-da99-42ba-bf4a-34735aaa835f
+ref table LocalDateTable_78077aa7-929d-42bb-913e-e7d4a739546e
 
 ref cultureInfo es-ES
 
